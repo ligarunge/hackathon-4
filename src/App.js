@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Footer from "./Components/Footer";
 import Categories from "./Pages/Categories";
 import Login from "./Pages/Login";
 import Orders from "./Pages/Orders";
@@ -13,6 +14,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/orders" element={<Orders />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
