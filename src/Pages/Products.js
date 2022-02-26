@@ -40,7 +40,7 @@ function Products() {
    
 
     const productList = products.slice(startList, endList).map((product, index) => {
-        let productDiscount = product.price - (product.price*.2)
+        let productDiscount = product.price - (product.price * .2)
         return (
             
                 <tr>
