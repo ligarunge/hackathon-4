@@ -21,7 +21,7 @@ function Categories() {
 })
 
 return (
-    <div className="container-fluid d-flex" style={{ height: '93.8vh' }}>
+    <div className="container-fluid d-inline-flex">
         <div className="col-md-2 border-end border-secondary" style={{ minHeight: '45rem', maxWidth: '12rem' }}>
             <Header />
         </div>
@@ -31,9 +31,9 @@ return (
                 <p className="my-3">Search <input type="text"/></p>
         </div>
 
-        <table className="table table-striped h-75">
+        <table className="table table-striped ">
             <thead >
-                <tr>
+                <tr className="w-75" >
                     <th scope="col">ID</th>
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>
