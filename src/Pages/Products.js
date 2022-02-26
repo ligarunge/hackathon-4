@@ -13,14 +13,14 @@ function Products() {
                 <td>{product.describtione}</td>
                 <td>{product.price}</td>
                 <td>{product.discountPrice}</td>
-                <td><button type="button" className="btn btn-light">Edit</button><button type="button" className="btn btn-light">Delete</button></td>
+                <td className="d-flex h-100"><button type="button" className="btn btn-light">Edit</button><button type="button" className="btn btn-light">Delete</button></td>
                 </tr>
            
         )
     })
 
     return (
-        <div>
+        <div className="container">
             <table className="table  table-striped">
                 <thead>
                     <tr>
