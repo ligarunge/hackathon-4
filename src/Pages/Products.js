@@ -1,9 +1,18 @@
+import { useState } from "react"
 import getProducts from "../API/getProducts"
 
 function Products() {
-    const products = getProducts()
+    const [products, setProducts] = useState(getProducts())
 
-    const productList = products.map((product, index) => {
+    const deleteProduct = (productIndex) => {
+        products.splice(productIndex, 1)
+        setProducts([...products])
+    }
+    const [startList, setStartList] = useState(0)
+    const endList = startList + 5
+   
+
+    const productList = products.slice(startList, endList).map((product, index) => {
         return (
             
                 <tr>
@@ -15,7 +24,8 @@ function Products() {
                 <td className="align-middle text-center">{product.discountPrice}</td>
                 <td className="align-middle text-center">
                     <div className="d-flex">
-                    <button type="button" className="btn btn-light"style={{margin:'5px'}}>Edit</button><button type="button" className="btn btn-light" style={{margin:'5px'}}>Delete</button>
+                    <button type="button" className="btn btn-light"style={{margin:'5px'}}>Edit</button>
+                    <button onClick={() => deleteProduct(index)} type="button" className="btn btn-light" style={{margin:'5px'}}>Delete</button>
                     </div>
                     </td>
                 </tr>
@@ -25,6 +35,10 @@ function Products() {
 
     return (
         <div className="container">
+            <div className="d-inline-flex flex-column align-items-end w-100">
+                <button className="my-3" style={{ width: "200px" }}>Create category</button>
+                <p className="my-3">Search <input type="text" /></p>
+            </div>
             <table className="table  table-striped">
                 <thead>
                     <tr>
@@ -43,6 +57,15 @@ function Products() {
                   
                 </tbody>
             </table>
+            <nav className="navbar" aria-label="Page navigation example">
+                <ul className="pagination ms-auto">
+                    <li className="page-item"><a class="page-link" href="#">«</a></li>
+                    <li className="page-item"><a class="page-link" href="#">1</a></li>
+                    <li className="page-item"><a class="page-link" href="#">2</a></li>
+                    <li className="page-item"><a class="page-link" href="#">3</a></li>
+                    <li className="page-item"><a class="page-link" href="#">»</a></li>
+                </ul>
+            </nav>
         </div>
     )
 }
