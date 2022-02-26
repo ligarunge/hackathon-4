@@ -17,7 +17,7 @@ function Login(){
       }
 
         return(
-            <div className="container position-absolute start-50 translate-middle-x mt-5 pt-5" >
+            <div className="container mt-5 pt-5" style={{ height: '85vh' }}>
                 <div className="content-wraper d-flex align-items-center flex-column">
                 <img src="/Images/cat_logo.png" className="card-img-top w-25" alt="cat_logo.png"/>
 
