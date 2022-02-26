@@ -1,9 +1,9 @@
 
 import React from 'react';
-import './Login.css';
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import { useState } from "react";
+import image from "./cat_logo.png";
+
 
 function Login(){
     const [email, setEmail] = useState("");
@@ -18,29 +18,36 @@ function Login(){
       }
 
         return(
-            <div className="Login container d-flex justify-content-center w-100">
-            <Form className="d-flex flex-column w-50" onSubmit={handleSubmit}>
-              <Form.Group size="lg" controlId="email">
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                  autoFocus
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </Form.Group>
-              <Form.Group size="lg" controlId="password">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </Form.Group>
-              <Button block size="lg" type="submit" disabled={!validateForm()}>
-                Login
-              </Button>
-            </Form>
+            <div className="container w-100">
+                <div className="content-wraper d-flex align-items-center flex-column">
+                <img src={image} className="card-img-top w-50" alt="cat_logo.png"/>
+
+                <form className="d-flex flex-column w-50" onSubmit={handleSubmit}>
+                <div controlId="email">
+                    <p>Email</p>
+                    <Form.Control
+                    autoFocus
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    />
+                </div>
+                <div controlId="password">
+                <p>Password</p>
+                    <Form.Control
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    />
+                </div>
+                <div className="d-inline-flex justify-content-center ">
+                    <button className="w-25 my-3 text-dark" type="submit" disabled={!validateForm()}>
+                    Login
+                </button>
+                </div>
+              
+                </form>
+            </div>
           </div>
         )
     }
