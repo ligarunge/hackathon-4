@@ -2,6 +2,8 @@
 import React from 'react';
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
+import image from "./cat_logo.png";
+
 
 
 
