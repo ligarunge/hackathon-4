@@ -2,6 +2,7 @@
 import React from 'react';
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
+import { Link } from "react-router-dom"
 
 function Login(){
     const [email, setEmail] = useState("");
@@ -16,9 +17,9 @@ function Login(){
       }
 
         return(
-            <div className="container h-100">
+            <div className="container position-absolute bottom-50 start-50 translate-middle-x" >
                 <div className="content-wraper d-flex align-items-center flex-column">
-                <img src="/Images/cat_logo.png" className="card-img-top w-50" alt="cat_logo.png"/>
+                <img src="/Images/cat_logo.png" className="card-img-top w-25" alt="cat_logo.png"/>
 
                 <form className="d-flex flex-column w-50" onSubmit={handleSubmit}>
                 <div className="email">
@@ -39,9 +40,10 @@ function Login(){
                     />
                 </div>
                 <div className="d-inline-flex justify-content-center ">
-                    <button className="w-25 my-3 text-dark" type="submit" disabled={!validateForm()}>
+                    <Link to="/categories"><button className="btn my-3 btn-lg btn-outline-dark" type="submit" disabled={!validateForm()}>
                     Login
                 </button>
+                </Link>
                 </div>
               
                 </form>
