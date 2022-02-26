@@ -5,6 +5,8 @@ import { useState } from "react";
 import image from "./cat_logo.png";
 
 
+
+
 function Login(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -18,12 +20,12 @@ function Login(){
       }
 
         return(
-            <div className="container w-100">
+            <div className="container h-100">
                 <div className="content-wraper d-flex align-items-center flex-column">
-                <img src={image} className="card-img-top w-50" alt="cat_logo.png"/>
+                <img src="/Images/cat_logo.png" className="card-img-top w-50" alt="cat_logo.png"/>
 
                 <form className="d-flex flex-column w-50" onSubmit={handleSubmit}>
-                <div controlId="email">
+                <div className="email">
                     <p>Email</p>
                     <Form.Control
                     autoFocus
@@ -32,7 +34,7 @@ function Login(){
                     onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
-                <div controlId="password">
+                <div className="password">
                 <p>Password</p>
                     <Form.Control
                     type="password"
