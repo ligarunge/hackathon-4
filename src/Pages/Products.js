@@ -8,12 +8,12 @@ function Products() {
             
                 <tr>
                 <th scope="row"><img src={product.image} className="img-thumbnail" style={{width:100}} alt="..."/></th>
-                <td className="align-middle">{index}</td>
-                <td className="align-middle">{product.title}</td>
-                <td className="align-middle">{product.describtione}</td>
-                <td className="align-middle">{product.price}</td>
-                <td className="align-middle">{product.discountPrice}</td>
-                <td className="align-middle">
+                <td className="align-middle text-center">{index}</td>
+                <td className="align-middle text-center">{product.title}</td>
+                <td className="align-middle text-justify">{product.describtione}</td>
+                <td className="align-middle text-center">{product.price}</td>
+                <td className="align-middle text-center">{product.discountPrice}</td>
+                <td className="align-middle text-center">
                     <div className="d-flex">
                     <button type="button" className="btn btn-light"style={{margin:'5px'}}>Edit</button><button type="button" className="btn btn-light" style={{margin:'5px'}}>Delete</button>
                     </div>
