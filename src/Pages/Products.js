@@ -72,36 +72,39 @@ function Products() {
                     <button className="my-3" style={{ width: "200px" }}>Create category</button>
                     <p className="my-3">Search <input type="text" /></p>
                 </div>
-                <table className="table  table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Image</th>
-                            <th scope="col">ID</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Discount price</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <div className="container">
+                    <table className="table  table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Image</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Discount price</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                        {productList}
+                            {productList}
 
-                    </tbody>
-                </table>
-                <div className="row">
-                    <div className="col">
-                        <div className="btn-group float-end" role="group" aria-label="Basic outlined example">
-                            <button onClick={() => moveLeft(startList)} type="button" class="btn btn-outline-secondary">«</button>
-                            <button onClick={() => changePageOne(startList)} type="button" class="btn btn-outline-secondary">1</button>
-                            <button onClick={() => changePageTwo(startList)} type="button" class="btn btn-outline-secondary">2</button>
-                            <button onClick={() => changePageThree(startList)} type="button" class="btn btn-outline-secondary">3</button>
-                            <button onClick={() => changePageFour(startList)} type="button" class="btn btn-outline-secondary">4</button>
-                            <button onClick={() => moveRight(startList)} type="button" class="btn btn-outline-secondary">»</button>
+                        </tbody>
+                    </table>
+                    <div className="row">
+                        <div className="col">
+                            <div className="btn-group float-end" role="group" aria-label="Basic outlined example">
+                                <button onClick={() => moveLeft(startList)} type="button" class="btn btn-outline-secondary">«</button>
+                                <button onClick={() => changePageOne(startList)} type="button" class="btn btn-outline-secondary">1</button>
+                                <button onClick={() => changePageTwo(startList)} type="button" class="btn btn-outline-secondary">2</button>
+                                <button onClick={() => changePageThree(startList)} type="button" class="btn btn-outline-secondary">3</button>
+                                <button onClick={() => changePageFour(startList)} type="button" class="btn btn-outline-secondary">4</button>
+                                <button onClick={() => moveRight(startList)} type="button" class="btn btn-outline-secondary">»</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
 
             </div>
         </div>
