@@ -1,13 +1,20 @@
+import { useState } from "react"
 import getOrders from "../API/getOrders"
 import Header from "../Components/Header"
 
 function Orders() {
 
-    const customers = getOrders()
+ 
+    const [customers, setCustomers] = useState(getOrders())
+
+    const deleteOrder = (orderIndex) => {
+        customers.splice(orderIndex, 1)
+        setCustomers([...customers])
+    }
     const customersList = customers.map((order, index) => {
         return (
-            <tr key={index}>
-                <th scope="row ">{order.ID}</th>
+            <tr key={index} className="align-middle">
+                <th scope="row">{order.ID}</th>
                 <td>
                     <div className="row">
                         {order.CustomerName}
@@ -31,7 +38,8 @@ function Orders() {
                 <td>{order.Total}</td>
                 <td>{order.Status}</td>
                 <td></td>
-                <td></td>
+                <td>
+                    <button type="button" classname="btn btn-primary" onClick={() => deleteOrder(index)}>Delete</button></td>
             </tr>
         )
 
@@ -72,7 +80,6 @@ function Orders() {
                                 </thead>
                                 <tbody>
                                     {customersList}
-
                                 </tbody>
                             </table>
                         </div>
