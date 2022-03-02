@@ -19,7 +19,7 @@ function Login(){
         return(
             <div className="container mt-5 pt-5" style={{ height: '100vh' }}>
                 <div className="content-wraper d-flex align-items-center flex-column">
-                <img src="/Images/cat_logo.png" className="card-img-top w-25" alt="cat_logo.png"/>
+                <img src="/Images/cat_logo3_1.png" className="card-img-top w-25" alt="cat_logo.png"/>
 
                 <form className="d-flex flex-column w-50" onSubmit={handleSubmit}>
                 <div className="email">
