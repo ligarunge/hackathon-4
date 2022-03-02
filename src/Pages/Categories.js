@@ -21,7 +21,7 @@ function Categories() {
 })
 
 return ( 
-    <div className="container-fluid d-inline-flex flex-wrap " style={{ height: '93.8vh' }}>
+    <div className="container-fluid d-inline-flex flex-wrap " style={{ minHeight: '93.8vh' }}>
         <div className="col-md-2 border-end border-secondary" style={{ minHeight: '45rem', maxWidth: '12rem' }}>
             <Header />
         </div>
