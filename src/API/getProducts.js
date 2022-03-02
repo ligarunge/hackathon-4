@@ -35,7 +35,7 @@ function getProducts() {
             number: '05',
             describtione: 'I like cats because they are fat and fluffy sleep, sleep over your phone and make cute snoring noises yet sleep on dog bed, force dog to sleep on floor.',
             image: 'https://images.pexels.com/photos/1974508/pexels-photo-1974508.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-            price: 23.5,
+            price: 23,
         },
         {
             title: 'Sansevieria or Mother-in-law`s Tongue',
@@ -84,7 +84,7 @@ function getProducts() {
             number: '12',
             describtione: 'I like cats because they are fat and fluffy sleep, sleep over your phone and make cute snoring noises yet sleep on dog bed, force dog to sleep on floor.',
             image: 'https://images.pexels.com/photos/970089/pexels-photo-970089.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-            price: 2,
+            price: 21,
         },
         {
             title: 'Green plant',
@@ -112,14 +112,14 @@ function getProducts() {
             number: '16',
             describtione: 'I like cats because they are fat and fluffy sleep, sleep over your phone and make cute snoring noises yet sleep on dog bed, force dog to sleep on floor.',
             image: 'https://cdn.shopify.com/s/files/1/1706/1307/products/Sansevieria-zeylanica-Snake-Plant-Esra-Graphite-Plant-Pot_1200x.jpg?v=1622809957',
-            price: 24.5,
+            price: 24,
         },
         {
             title: 'Three palms',
             number: '17',
             describtione: 'I like cats because they are fat and fluffy sleep, sleep over your phone and make cute snoring noises yet sleep on dog bed, force dog to sleep on floor.',
             image: 'https://i.pinimg.com/originals/e0/59/de/e059de3d57c4423db3682669bf7be05a.jpg',
-            price: 27.5,
+            price: 27,
         },
         {
             title: 'Small palm',
