@@ -73,7 +73,7 @@ function Products() {
                     <p className="my-3">Search <input type="text" /></p>
                 </div>
                 <div className="container">
-                    <table className="table  table-striped">
+                    <table className="table table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">Image</th>
@@ -86,9 +86,7 @@ function Products() {
                             </tr>
                         </thead>
                         <tbody>
-
                             {productList}
-
                         </tbody>
                     </table>
                     <div className="row">
