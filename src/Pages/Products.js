@@ -45,7 +45,7 @@ function Products() {
         return (
             
                 <tr>
-                <th scope="row"><img src={product.image} className="img-thumbnail" style={{width:100}} alt="..."/></th>
+                <th scope="row"><img src={product.image} style={{width:100}} alt="..."/></th>
                 <td className="align-middle text-center">{product.number}</td>
                 <td className="align-middle text-center">{product.title}</td>
                 <td className="align-middle text-justify">{product.describtione}</td>
