@@ -15,19 +15,20 @@ function Orders() {
     }
     const customersList = customers
         .filter(order => keyWord === '' ||
-            order.Country === keyWord ||
-            order.CustomerName === keyWord ||
-            order.Surname === keyWord ||
-            order.City === keyWord ||
-            order.Quantity === keyWord ||
-            order.Status === keyWord)
+            order.Country.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()) ||
+            order.CustomerName.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()) ||
+            order.Surname.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()) ||
+            order.City.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()) ||
+            order.Street.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()) ||
+            order.Quantity.includes(keyWord) ||
+            order.Status.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()))
         .map((order, index) => {
 
             return (
                 <tr key={index} className="align-middle">
-                    <th scope="row">{order.ID}</th>
+                    <th scope="row" style={{color: 'rgb(50, 105, 84)'}}>{order.ID}</th>
                     <td>
-                        <div className="row">
+                        <div className="row fst-italic">
                             {order.CustomerName} {order.Surname}
                         </div>
                         <div className="row">
@@ -41,9 +42,9 @@ function Orders() {
                         </div>
                     </td>
                     <td>{order.Quantity}</td>
-                    <td>{order.Price}</td>
-                    <td>{order.VAT}</td>
-                    <td>{order.Total}</td>
+                    <td>€{order.Price}</td>
+                    <td>€{(order.Price * 0.21).toFixed(2)}</td>
+                    <td>€{parseFloat(order.Price*1.21*order.Quantity).toFixed(2)}</td>
                     <td><span className="badge rounded-pill bg-light" style={{ color: order.color, borderColor: order.color }}>{order.Status}</span></td>
                     <td>
                         <button type="button" className="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -66,7 +67,7 @@ function Orders() {
                     <Header />
                 </div>
                 <div className="col-md-10">
-                    <div className="row justify-content-start">
+                    <div className="row justify-content-start m-2">
                         <div className="col-md-2">
                             Categories
                         </div>
@@ -77,7 +78,7 @@ function Orders() {
                                 type="text"
                                 value={keyWord}
                                 onChange={(event) => setKeyWord(event.target.value)} />
-                            <span className="m-3" style={{ color: ' rgb(50, 105, 84)' }}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <span className="m-3" style={{ color: 'rgb(50, 105, 84)' }}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                             </svg></span>
                         </div>
@@ -85,7 +86,7 @@ function Orders() {
                     <div className="row">
                         <div className="col-md-12">
                             <table className="table table-hover m-3">
-                                <thead>
+                                <thead style={{color: 'rgb(50, 105, 84)'}}>
                                     <tr>
                                         <th scope="col">ID</th>
                                         <th scope="col">Customer</th>
