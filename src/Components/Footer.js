@@ -6,7 +6,7 @@ function Footer() {
             <footer className="border-top">
                 <div className="row mt-4">
                     <div className="col-md-6 text-white">
-                        <div className="row display-5">
+                        <div className="row display-6">
                             <div className="col-12 text-center fw-bolder">
                                 FIND US AT
                             </div>
@@ -23,7 +23,7 @@ function Footer() {
                         </div>
                     </div>
                     <div className="col-md-6 text-white">
-                        <div className="row display-5">
+                        <div className="row display-6">
                             <div className="col-12 text-center fw-bolder">
                                 CONTACT US
                             </div>
