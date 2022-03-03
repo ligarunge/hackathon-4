@@ -4,6 +4,7 @@ import Header from "../Components/Header"
 
 function Products() {
     const [products, setProducts] = useState(getProducts())
+    const [keyWord, setKeyWord] = useState('')
 
     const deleteProduct = (productIndex) => {
         products.splice(productIndex, 1)
@@ -41,6 +42,10 @@ function Products() {
    
 
     const productList = products
+        .filter(product => keyWord === ''||
+        product.title.toLowerCase().includes(keyWord.toLowerCase()) ||
+        product.describtione.toLowerCase().includes(keyWord.toLowerCase()) ||
+        product.price.toString().includes(keyWord))
         .slice(startList, endList)
         .map((product, index) => {
             return (
@@ -74,7 +79,9 @@ function Products() {
                     <button className="my-3" style={{ width: "200px", color: 'rgb(50, 105, 84)' }}>Create category</button>
                     <input 
                         style={{ margin: '10px' }} 
-                        type="text"/>
+                        type="text"
+                        value={keyWord}
+                        onChange={(event) =>setKeyWord(event.target.value)}/>
                     <span className="my-3" style={{ color: 'rgb(50, 105, 84)' }}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                             </svg></span>
