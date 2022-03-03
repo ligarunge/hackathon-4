@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import getOrders from "../API/getOrders"
 import Header from "../Components/Header"
 
@@ -26,7 +27,7 @@ function Orders() {
 
             return (
                 <tr key={index} className="align-middle">
-                    <th scope="row" style={{color: 'rgb(50, 105, 84)'}}>{order.ID}</th>
+                    <th scope="row" style={{ color: 'rgb(50, 105, 84)' }}>{order.ID}</th>
                     <td>
                         <div className="row fst-italic">
                             {order.CustomerName} {order.Surname}
@@ -44,7 +45,7 @@ function Orders() {
                     <td>{order.Quantity}</td>
                     <td>€{order.Price}</td>
                     <td>€{(order.Price * 0.21).toFixed(2)}</td>
-                    <td>€{parseFloat(order.Price*1.21*order.Quantity).toFixed(2)}</td>
+                    <td>€{parseFloat(order.Price * 1.21 * order.Quantity).toFixed(2)}</td>
                     <td><span className="badge rounded-pill bg-light" style={{ color: order.color, borderColor: order.color }}>{order.Status}</span></td>
                     <td>
                         <button type="button" className="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -69,7 +70,14 @@ function Orders() {
                 <div className="col-md-10">
                     <div className="row justify-content-start m-2">
                         <div className="col-md-2">
-                            Categories
+
+                            <nav aria-label="breadcrumb">
+                                <Link className="fs-6" style={{ color: 'grey', textDecoration: 'none' }} to="/categories">Categories <svg xmlns="http://www.w3.org/2000/svg" width="26" height="66" fill="currentColor" className="bi bi-caret-left" viewBox="0 0 16 16">
+                                    <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                                </svg></Link>
+                            </nav>
+
+
                         </div>
                     </div>
                     <div className="row justify-content-end align-middle">
@@ -86,7 +94,7 @@ function Orders() {
                     <div className="row">
                         <div className="col-md-12">
                             <table className="table table-hover m-3">
-                                <thead style={{color: 'rgb(50, 105, 84)'}}>
+                                <thead style={{ color: 'rgb(50, 105, 84)' }}>
                                     <tr>
                                         <th scope="col">ID</th>
                                         <th scope="col">Customer</th>

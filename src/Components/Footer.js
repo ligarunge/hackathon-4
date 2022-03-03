@@ -56,6 +56,11 @@ function Footer() {
                         </svg>
                     </div>
                 </div>
+                <div className="row mt-3 text-white">
+                    <div className="col-12 text-center lead">
+                    <p>© 2022 SHE GOES TECH</p>
+                    </div>
+                </div>
             </footer>
         </div>
     )
