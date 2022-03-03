@@ -16,13 +16,13 @@ function Orders() {
     }
     const customersList = customers
         .filter(order => keyWord === '' ||
-            order.Country.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()) ||
-            order.CustomerName.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()) ||
-            order.Surname.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()) ||
-            order.City.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()) ||
-            order.Street.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()) ||
+            order.Country.toLowerCase().includes(keyWord.toLowerCase()) ||
+            order.CustomerName.toLowerCase().includes(keyWord.toLowerCase()) ||
+            order.Surname.toLowerCase().includes(keyWord.toLowerCase()) ||
+            order.City.toLowerCase().includes(keyWord.toLowerCase()) ||
+            order.Street.toLowerCase().includes(keyWord.toLowerCase()) ||
             order.Quantity.includes(keyWord) ||
-            order.Status.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()))
+            order.Status.toLowerCase().includes(keyWord.toLowerCase()))
         .map((order, index) => {
 
             return (
