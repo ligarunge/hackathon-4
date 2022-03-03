@@ -7,12 +7,12 @@ function Footer() {
                 <div className="row mt-4">
                     <div className="col-md-6 text-white">
                         <div className="row display-6">
-                            <div className="col-12 text-center fw-bolder">
+                            <div className="col-12 text-center fw-bolder fs-2">
                                 FIND US AT
                             </div>
                         </div>
                         <div className="row display-6">
-                            <div className="col-12 text-center">
+                            <div className="col-12 text-center fs-2">
                                 Amazon
                             </div>
                         </div>
@@ -24,16 +24,16 @@ function Footer() {
                     </div>
                     <div className="col-md-6 text-white">
                         <div className="row display-6">
-                            <div className="col-12 text-center fw-bolder">
+                            <div className="col-12 text-center fw-bolder fs-2">
                                 CONTACT US
                             </div>
                         </div>
-                        <div className="row display-6">
+                        <div className="row display-6 fs-2">
                             <div className="col-12 text-center">
                                 Anytime
                             </div>
                         </div>
-                        <div className="row mt-3">
+                        <div className="row mt-3 mb-3">
                             <div className="col-12 text-center">
                                 <button className="btn btn-outline-light rounded-pill">SAY HELLO</button>
                             </div>
