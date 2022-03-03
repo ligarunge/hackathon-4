@@ -48,7 +48,7 @@ function Login() {
                         </div>
                         <div className="row justify-content-center mt-4">
                             <div className='col-md-3'>
-                                <Link to="/categories"><button className="btn btn-lg btn-outline-dark" style={{color:' rgb(50, 105, 84)', fontWeight: 'bold' }} type="submit" disabled={!validateForm()}>
+                                <Link to="/categories"><button className="btn btn-lg btn-outline-dark" style={{backgroundImage: "url(/Images/button.jpg)", backgroundSize: 'cover', color:'white', fontWeight: 'bold' }} type="submit" disabled={!validateForm()}>
                                     Login
                                 </button>
                                 </Link>
