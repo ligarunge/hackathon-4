@@ -62,7 +62,7 @@ function Orders() {
         })
 
     return (
-        <div className="container-fluid" style={{ minHeight: '45rem', backgroundImage: "url(/Images/plants2.jpg)", backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+        <div className="container-fluid" style={{ minHeight: '47rem', backgroundImage: "url(/Images/plants2.jpg)", backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
             <div className="row">
                 <div className="col-md-2 border-end border-secondary" style={{ minHeight: '45rem', maxWidth: '12rem' }}>
                     <Header />
@@ -72,9 +72,9 @@ function Orders() {
                         <div className="col-md-2">
 
                             <nav aria-label="breadcrumb">
-                                <Link className="fs-6" style={{ color: 'grey', textDecoration: 'none' }} to="/categories">Categories <svg xmlns="http://www.w3.org/2000/svg" width="26" height="66" fill="currentColor" className="bi bi-caret-left" viewBox="0 0 16 16">
+                                <Link className="fs-6" style={{ color: 'grey', textDecoration: 'none' }} to="/categories"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="66" fill="currentColor" className="bi bi-caret-left" viewBox="0 0 16 16">
                                     <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
-                                </svg></Link>
+                                </svg> Categories </Link>
                             </nav>
 
 
